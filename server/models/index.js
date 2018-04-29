@@ -5,18 +5,29 @@ const path      = require('path');
 const Sequelize = require('sequelize');
 const basename  = path.basename(__filename);
 const env       = process.env.NODE_ENV || 'development';
-const config    = require(__dirname + '/../config/config.json')[env];
+const config    = require(__dirname + '/../config/config.js')[env];
 const db        = {};
+require('dotenv').config()
 
-let sequelize
+let sequelize;
 
-if (process.env.DATABASE_URL) {
-  sequelize = new Sequelize(process.env.DATABASE_URL);
+if (config.url) {
+  sequelize = new Sequelize(config.url);
   console.log("Connected to ElephantSQL")
 } else {
   console.log("Error connecting to ElephantSQL");
   // sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
+
+//connection test
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log("Connected to ElephantSQL");
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
 
 fs
   .readdirSync(__dirname)

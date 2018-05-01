@@ -14,16 +14,10 @@ module.exports = {
   //   host: '127.0.0.1',
   //   dialect: 'psql'
   // },
-  // production: {
-  //   username: process.env.DB_USERNAME,
-  //   password: process.env.DB_PASSWORD,
-  //   database: process.env.DB_NAME,
-  //   host: process.env.DB_HOSTNAME,
-  //   dialect: 'psql',
-  //   dialectOptions: {
-  //     ssl: {
-  //       ca: fs.readFileSync(__dirname + '/mysql-ca-master.crt')
-  //     }
-  //   }
-  // }
+  production: {
+    development: {
+    url: process.env.PRODUCTION_DATABASE_URL,
+    dialect: 'postgres'
+  },
+  }
 };

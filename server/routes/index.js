@@ -4,11 +4,15 @@ module.exports = (app) => {
 
   //home
   app.get('/', (req, res) => {
-    res.render('home')
+    res.render('pages/home')
   });
 
   app.get('/map',(req, res) => {
-    res.render('map')
+    res.render('pages/map')
+  });
+
+  app.get('/comics',(req, res) => {
+    res.render('pages/comics')
   });
 
   //API ROUTES

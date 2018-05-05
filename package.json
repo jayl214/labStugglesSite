@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch public/style/scss -o public/style/css",
     "start:dev": "nodemon ./bin/www"
   },
   "repository": {
@@ -24,11 +25,13 @@
     "express": "^4.16.3",
     "helmet": "^3.12.0",
     "morgan": "^1.9.0",
+    "npm": "^6.0.0",
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.37.6"
   },
   "devDependencies": {
+    "node-sass": "^4.9.0",
     "nodemon": "^1.17.3"
   }
 }

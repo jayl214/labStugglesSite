@@ -7,13 +7,13 @@ module.exports = (app) => {
     res.render('pages/home')
   });
 
-  app.get('/map',(req, res) => {
-    res.render('pages/map')
-  });
+  // app.get('/map',(req, res) => {
+  //   res.render('pages/map')
+  // });
 
-  app.get('/comics',(req, res) => {
-    res.render('pages/comics')
-  });
+  // app.get('/comics',(req, res) => {
+  //   res.render('pages/comics')
+  // });
 
   //API ROUTES
   app.get('/api', (req, res) => res.status(200).send({

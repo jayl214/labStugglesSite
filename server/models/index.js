@@ -13,21 +13,20 @@ let sequelize;
 
 if (config.url) {
   sequelize = new Sequelize(config.url);
-  console.log("Connected to ElephantSQL")
+  // console.log("Connected to ElephantSQL")
+  //connection test
+  sequelize
+    .authenticate()
+    .then(() => {
+      console.log("Connected to ElephantSQL");
+    })
+    .catch(err => {
+      console.error('Unable to connect to the database:', err);
+    });
 } else {
-  console.log("Error connecting to ElephantSQL");
+  console.log("Check elephantsql config url");
   // sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
-
-//connection test
-sequelize
-  .authenticate()
-  .then(() => {
-    console.log("Connected to ElephantSQL");
-  })
-  .catch(err => {
-    console.error('Unable to connect to the database:', err);
-  });
 
 fs
   .readdirSync(__dirname)

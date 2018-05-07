@@ -2,26 +2,26 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="style/css/application.css">
-  <link rel="icon" type="image/png" href="docs/images/bust.png">
-  <title>LabStruggles</title>
+  <%- include ../partials/head.ejs %>
 </head>
 
 <body>
 
-
 <main>
+
   <div>
-    <h1>CHANGE1</h1>
     <ul>
-      <li><a href="/comic">Comics</a></li>
+      <li><a href="/comics">Comics</a></li>
       <li class="map"><a href="/map">Map</a></li>
     </ul>
   </div>
 </main>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<%- include ../partials/bootstrapScripts.ejs %>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 <script src="scripts/home.js"></script>
 
 </body>

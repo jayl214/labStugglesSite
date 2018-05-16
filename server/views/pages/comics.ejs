@@ -10,9 +10,12 @@
 <%- include ../partials/navbar.ejs %>
 
 <main>
+
   <div>
     <h1>Top Comics</h1>
   </div>
+  <div id="instafeed"></div>
+  <button id="load-more">NEXT</button>
 </main>
 
 <!-- footer -->
@@ -22,6 +25,58 @@
 <%- include ../partials/bootstrapScripts.ejs %>
 <script src="scripts/home.js"></script>
 
+<script type="text/javascript" src="scripts/instafeed.min.js"></script>
+<script type="text/javascript">
+
+  var loadButton = document.getElementById('load-more');
+
+
+  var feed = new Instafeed({
+  get: 'user',
+  userId: '4358235054',
+  accessToken: '4358235054.1677ed0.ee83c5c2c0cf4963a4708483ddd40a78',
+  after: function() {
+            // disable button if no more results to load
+            if (!this.hasNext()) {
+                loadButton.setAttribute('disabled', 'disabled');
+            }
+        },
+  });
+
+  loadButton.addEventListener('click', function() {
+    feed.next();
+  });
+  feed.run();
+
+
+
+</script>
+
 </body>
+
+
+<!-- <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{latest-api-version}'
+    });
+
+    FB.AppEvents.logPageView();
+
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script> -->
+
+
 
 </html>

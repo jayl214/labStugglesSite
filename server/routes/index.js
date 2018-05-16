@@ -15,6 +15,10 @@ module.exports = (app) => {
     res.render('pages/comics')
   });
 
+  app.get('/login',(req, res) => {
+    res.render('pages/login')
+  });
+
   //API ROUTES
   app.get('/api', (req, res) => res.status(200).send({
     message: 'Welcome to the LabStruggles API!',

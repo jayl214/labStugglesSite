@@ -1,5 +1,5 @@
-const comics = require('./comics');
+const fosterPosts = require('./fosterPosts');
 
 module.exports = {
-  comics,
+  fosterPosts,
 };

@@ -1,4 +1,5 @@
-const comicsController = require('../controllers').comics;
+const fosterPostsController = require('../controllers').fosterPosts;
+const http = require('http');
 
 module.exports = (app) => {
 
@@ -8,7 +9,19 @@ module.exports = (app) => {
   });
 
   app.get('/map',(req, res) => {
-    res.render('pages/map')
+    http.get('http://localhost:8000/api/fosterPosts', (dbRes)=>{
+      var body = '';
+      dbRes.on('data', function(chunk){
+          body += chunk;
+      })
+      dbRes.on('end', function(){
+          let fosterPostsList = JSON.parse(body)
+          let templateVars = {"templateVars": fosterPostsList}
+          res.render('pages/map', templateVars)
+      })
+    }).on('error', e => {
+      console.log('error')
+    })
   });
 
   app.get('/comics',(req, res) => {
@@ -24,6 +37,8 @@ module.exports = (app) => {
     message: 'Welcome to the LabStruggles API!',
   }));
 
-  //comics
-  app.post('/api/comics', comicsController.create);
+  //foster posts
+  app.post('/api/fosterPosts', fosterPostsController.create);
+  app.get('/api/fosterPosts', fosterPostsController.list);
+
 };

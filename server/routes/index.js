@@ -9,7 +9,7 @@ module.exports = (app) => {
   });
 
   app.get('/map',(req, res) => {
-    http.get('http://localhost:8000/api/fosterPosts', (dbRes)=>{
+    http.get(req.protocol + '://' + req.get('host')+'/api/fosterPosts', (dbRes)=>{
       var body = '';
       dbRes.on('data', function(chunk){
           body += chunk;

@@ -1,3 +1,4 @@
+
 $(document).ready(()=>{
 
 
@@ -13,7 +14,25 @@ $(document).ready(()=>{
   }).addTo(mymap);
 
   // mockDb
-  let arrayOfCoordSets = [[45.5048, -73.5772],[45.5048, -73.2772]]
+
+  let arrayOfCoordSets = []
+
+  $.ajax({
+    'url' : 'http://localhost:8000/api/fosterPosts',
+    'type' : 'GET',
+    'success' : function(data) {
+      console.log(data)
+      data.forEach(post=>{
+        let coord = [parseInt(post.latitude), parseInt(post.longitude)]
+        arrayOfCoordSets.push(coord)
+        console.log(arrayOfCoordSets)
+      })
+
+  //ajax close
+  //   }
+  // });
+
+  // let arrayOfCoordSets = [[45.5048, -73.5772],[45.5048, -73.2772]]
   let picUrl = 'https://instagram.fymy1-1.fna.fbcdn.net/vp/49bbf0a2000c976e4b660e56df2c045e/5B82C748/t51.2885-15/e35/32178347_421167874995732_2813549512725889024_n.jpg'
   let postUrl = 'https://www.instagram.com/p/Bi7CTHNAAxB/?taken-by=labstruggles'
 
@@ -58,4 +77,9 @@ $(document).ready(()=>{
               .setContent(content)
   }
 
+  // ajax close
+  }
+  });
+
+//document ready
 })

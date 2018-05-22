@@ -12,7 +12,6 @@ $(document).ready(()=>{
       mymap.panInsideBounds(bounds, { animate: false });
   });
 
-
   // mapbox tiles
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -42,30 +41,33 @@ $(document).ready(()=>{
         if(!uniquePopupObj[`${coord}`]){ //if the coord is new, create a new entry for it in popupObj
           uniquePopupObj[`${coord}`] = {
                                         "coord" : coord,
-                                          "posts" : [{
-                                            "postId" : post.id,
-                                            "postUrl" : post.postUrl,
-                                            "picUrl" : post.picUrl
-                                          }],
-                                          "popup" : `
-                                                    <div class="post-container">
-                                                      <div class="container">
-                                                        <div class="row">
+                                        "posts" : [{
+                                          "postId" : post.id,
+                                          "postUrl" : post.postUrl,
+                                          "picUrl" : post.picUrl
+                                        }],
+                                        "singleOrManyPost" : "single-post",
+                                        "popup" : `
 
-                                                          <div class="col">
-                                                            <a href="${post.postUrl}" target="_blank">
-                                                              <img class="post" src="${post.picUrl}">
-                                                            </a>
-                                                          </div>
-                                                    `
+                                                    <div class="container">
+                                                      <div class="row">
+
+                                                        <div class="col">
+                                                          <a href="${post.postUrl}" target="_blank">
+                                                            <img class="post" src="${post.picUrl}">
+                                                          </a>
+                                                        </div>
+                                                  `,
                                         }
         }else{ //if the coords already exist, append data of new post to existing obj
           let existingPopup = uniquePopupObj[`${coord}`]
 
+          existingPopup.singleOrManyPost = "many-post"
+
           existingPopup["posts"].push({
             "postId" : post.id,
             "postUrl" : post.postUrl,
-            "picUrl" : post.picUrl
+            "picUrl" : post.picUrl,
           })
 
           let newPost = `<div class="col">
@@ -81,7 +83,7 @@ $(document).ready(()=>{
 
       for (let key in uniquePopupObj) {
         //close post-container, container, and row divs for each popup
-        uniquePopupObj[key].popup+`   </div>
+        uniquePopupObj[key].popup = `<div class="post-container ${uniquePopupObj[key].singleOrManyPost}">` + uniquePopupObj[key].popup+`   </div>
                                     </div>
                                   </div>`
 
@@ -93,7 +95,6 @@ $(document).ready(()=>{
       for (let key in uniquePopupObj){
         placeMarkers(uniquePopupObj[key].coord)
       }
-
 
       //toggle popup on zoom level
       mymap.on("zoomend", function(){
@@ -108,9 +109,7 @@ $(document).ready(()=>{
             mymap.removeLayer(popup)
           })
         }
-      });
-
-
+      })
 
     } // ajax req success close
   }) //ajax close

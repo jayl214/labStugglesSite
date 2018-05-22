@@ -9,19 +9,7 @@ module.exports = (app) => {
   });
 
   app.get('/map',(req, res) => {
-    http.get(req.protocol + '://' + req.get('host')+'/api/fosterPosts', (dbRes)=>{
-      var body = '';
-      dbRes.on('data', function(chunk){
-          body += chunk;
-      })
-      dbRes.on('end', function(){
-          let fosterPostsList = JSON.parse(body)
-          let templateVars = {"templateVars": fosterPostsList}
-          res.render('pages/map', templateVars)
-      })
-    }).on('error', e => {
-      console.log('error')
-    })
+    res.render('pages/map')
   });
 
   app.get('/comics',(req, res) => {

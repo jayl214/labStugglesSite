@@ -26,7 +26,7 @@ module.exports = (app) => {
   }));
 
   //foster posts
-  app.post('/api/fosterPosts', fosterPostsController.create);
+  // app.post('/api/fosterPosts', fosterPostsController.create);
   app.get('/api/fosterPosts', fosterPostsController.list);
 
 };

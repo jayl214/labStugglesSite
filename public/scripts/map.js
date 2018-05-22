@@ -13,7 +13,7 @@ $(document).ready(()=>{
   }).addTo(mymap);
 
 
-  let arrayOfCoords = []
+  // let arrayOfCoords = []
 
 
   let popupLayer = []
@@ -39,7 +39,18 @@ $(document).ready(()=>{
                                             "postId" : post.id,
                                             "postUrl" : post.postUrl,
                                             "picUrl" : post.picUrl
-                                          }]
+                                          }],
+                                          "popup" : `
+                                                    <div class="post-container">
+                                                    <div class="container">
+                                                      <div class="row">
+
+                                                        <div class="col">
+                                                          <a href="#">
+                                                            <img class="post" src="${post.picUrl}">
+                                                          </a>
+                                                        </div>
+                                                    `
                                         }
         }else{
           uniquePopupObj[`${coord}`]["posts"].push({
@@ -47,40 +58,35 @@ $(document).ready(()=>{
             "postUrl" : post.postUrl,
             "picUrl" : post.picUrl
           })
+          uniquePopupObj[`${coord}`]["popup"] = uniquePopupObj[`${coord}`]["popup"] + `<div class="col">
+                                                          <a href="#">
+                                                            <img class="post" src="${post.picUrl}">
+                                                          </a>
+                                                        </div>`
         }
-
-        arrayOfCoords.push(coord)
 
       })
 
-      console.log(uniquePopupObj)
-
       for (let key in uniquePopupObj) {
-        popupLayer.push(setPopup(uniquePopupObj[key].coord,"popup"))
+        uniquePopupObj[key].popup+"</div></div></div>"
+        popupLayer.push(setPopup(uniquePopupObj[key].coord,uniquePopupObj[key].popup))
       }
-
-      // let arrayOfCoords = [[45.5048, -73.5772],[45.5048, -73.2772]]
-      let picUrl = 'https://instagram.fymy1-1.fna.fbcdn.net/vp/49bbf0a2000c976e4b660e56df2c045e/5B82C748/t51.2885-15/e35/32178347_421167874995732_2813549512725889024_n.jpg'
-      let postUrl = 'https://www.instagram.com/p/Bi7CTHNAAxB/?taken-by=labstruggles'
 
       // place markers given coordinates
       for (let key in uniquePopupObj){
         placeMarkers(uniquePopupObj[key].coord)
       }
 
-      let popup = `<a href="${postUrl}">\
-                    <img class="post" src="${picUrl}">\
-                  </a>`
 
       //toggle popup on zoom level
       mymap.on("zoomend", function(){
         zoomLev = mymap.getZoom();
         console.log(zoomLev)
-        if (zoomLev > 5){
+        if (zoomLev > 3){
           popupLayer.forEach((popup)=>{
             mymap.addLayer(popup)
           })
-        }else if(zoomLev < 6){
+        }else if(zoomLev < 4){
           popupLayer.forEach((popup)=>{
             mymap.removeLayer(popup)
           })

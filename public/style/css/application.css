@@ -11,9 +11,9 @@
   overflow: scroll; }
 
 .post {
-  height: 75px;
-  width: 75px; }
+  height: 100px;
+  width: 100px; }
 
 @media (min-width: 576px) {
   .post-container.many-post {
-    width: 212px; } }
+    width: 260px; } }

@@ -83,9 +83,11 @@ $(document).ready(()=>{
 
       for (let key in uniquePopupObj) {
         //close post-container, container, and row divs for each popup
-        uniquePopupObj[key].popup = `<div class="post-container ${uniquePopupObj[key].singleOrManyPost}">` + uniquePopupObj[key].popup+`   </div>
-                                    </div>
-                                  </div>`
+        uniquePopupObj[key].popup = `<div class="post-container ${uniquePopupObj[key].singleOrManyPost}">` +
+                                          uniquePopupObj[key].popup+
+                                        `</div>
+                                      </div>
+                                    </div>`
 
         //push leaflet-ready data to popupLayer array
         popupLayer.push(setPopup(uniquePopupObj[key].coord,uniquePopupObj[key].popup))

@@ -13,9 +13,19 @@
   <!-- links -->
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="comics">Comics <span class="sr-only">(current)</span></a>
-      <!-- <a class="nav-item nav-link" href="#">Comics</a> -->
-      <a class="nav-item nav-link" href="map">Map</a>
+
+      <% if (pathname === "comics"){ %>
+        <a class="nav-item nav-link active" href="comics">Comics</a>
+      <% }else{ %>
+        <a class="nav-item nav-link" href="comics">Comics</a>
+      <% } %>
+
+      <% if (pathname === "map"){ %>
+        <a class="nav-item nav-link active" href="map">Map</a>
+      <% }else{ %>
+        <a class="nav-item nav-link" href="map">Map</a>
+      <% } %>
+
     </div>
   </div>
 

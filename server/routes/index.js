@@ -1,5 +1,9 @@
 const fosterPostsController = require('../controllers').fosterPosts;
 const http = require('http');
+var requestify = require('requestify');
+var request = require('request');
+
+
 
 module.exports = (app) => {
 
@@ -9,16 +13,23 @@ module.exports = (app) => {
   });
 
   app.get('/map',(req, res) => {
-    res.render('pages/map')
+    res.render('pages/map', {"pathname": "map"})
   });
 
   app.get('/comics',(req, res) => {
-    res.render('pages/comics')
+
+    request(`http://api.instagram.com/v1/users/self/media/recent/?access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`, function (error, response, body) {
+      console.log('error:', error); // Print the error if one occurred
+      console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+      let bodyData = JSON.parse(body).data
+
+      res.render('pages/comics', {"pathname": "comics", "instaData": bodyData})
+    });
   });
 
-  app.get('/login',(req, res) => {
-    res.render('pages/login')
-  });
+  // app.get('/login',(req, res) => {
+  //   res.render('pages/login')
+  // });
 
   //API ROUTES
   app.get('/api', (req, res) => res.status(200).send({
@@ -26,7 +37,7 @@ module.exports = (app) => {
   }));
 
   //foster posts
-  // app.post('/api/fosterPosts', fosterPostsController.create);
+  app.post('/api/fosterPosts/'+process.env.POST_REQ_SECRET, fosterPostsController.create);
   app.get('/api/fosterPosts', fosterPostsController.list);
 
 };

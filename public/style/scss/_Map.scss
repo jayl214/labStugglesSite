@@ -5,29 +5,16 @@
 
 .post-container{
   max-height: 200px;
-  // height: 200px;
   overflow: scroll;
-
-}
-.post-container.single-post{
-  // max-width: 212px;
-}
-
-.post-container.many-post{
-  // width: 212px;
 }
 
 .post{
-  height: 75px;
-  width: 75px;
+  height: 100px;
+  width: 100px;
 }
 
 @media (min-width: 576px) {
-  .post-container.single-post{
-  // max-width: 212px;
-  }
-
   .post-container.many-post{
-    width: 212px;
+    width: 260px;
   }
 }

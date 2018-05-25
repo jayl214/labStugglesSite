@@ -1,6 +1,5 @@
 const fosterPostsController = require('../controllers').fosterPosts;
 const http = require('http');
-var requestify = require('requestify');
 var request = require('request');
 
 

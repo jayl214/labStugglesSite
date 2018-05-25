@@ -2,7 +2,7 @@
 $(document).ready(()=>{
 
   // initialize map with default coords and zoom level
-  let mymap = L.map('mapid').setView([45.5048, -73.5772], 3)
+  let mymap = L.map('mapid').setView([45.5048, -73.5772], 4)
 
   //restrict panning to world map
   const southWest = L.latLng(-89.98155760646617, -180), northEast = L.latLng(89.99346179538875, 180);
@@ -48,14 +48,14 @@ $(document).ready(()=>{
                                         }],
                                         "singleOrManyPost" : "single-post",
                                         "popup" : `
-
                                                     <div class="container">
                                                       <div class="row">
-
                                                         <div class="col">
+
                                                           <a href="${post.postUrl}" target="_blank">
                                                             <img class="post" src="${post.picUrl}">
                                                           </a>
+
                                                         </div>
                                                   `,
                                         }
@@ -112,6 +112,10 @@ $(document).ready(()=>{
           })
         }
       })
+
+      popupLayer.forEach((popup)=>{
+            mymap.addLayer(popup)
+          })
 
     } // ajax req success close
   }) //ajax close

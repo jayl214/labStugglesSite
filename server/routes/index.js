@@ -12,6 +12,7 @@ module.exports = (app) => {
   });
 
   app.get('/map',(req, res) => {
+    //send template var pathname to for navbar highlight
     res.render('pages/map', {"pathname": "map"})
   });
 
@@ -24,6 +25,10 @@ module.exports = (app) => {
 
       res.render('pages/comics', {"pathname": "comics", "instaData": bodyData})
     });
+  });
+
+  app.get('/about',(req, res) => {
+    res.render('pages/about', {"pathname": "about"})
   });
 
   // app.get('/login',(req, res) => {

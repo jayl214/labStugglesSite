@@ -1,18 +1,22 @@
+//map size
 #mapid {
   height: 500px;
   width: 100%;
 }
 
+//style of post container within popup
 .post-container{
   max-height: 200px;
   overflow: scroll;
 }
 
+//style of individual post within post container
 .post{
   height: 100px;
   width: 100px;
 }
 
+//increase width at large enough screen size
 @media (min-width: 576px) {
   .post-container.many-post{
     width: 260px;

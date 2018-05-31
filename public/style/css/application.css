@@ -1,3 +1,6 @@
+body {
+  font-family: "Neucha", cursive; }
+
 .footer {
   height: 76px;
   background-color: #f8f9fa; }
@@ -9,14 +12,15 @@
 .post-container {
   max-height: 200px;
   overflow: scroll; }
-
-.post {
-  height: 100px;
-  width: 100px; }
+  .post-container .container .row .col {
+    padding: 5px; }
+    .post-container .container .row .col a .post {
+      height: 100px;
+      width: 100px; }
 
 @media (min-width: 576px) {
   .post-container.many-post {
-    width: 260px; } }
+    width: 220px; } }
 
 .carousel {
   width: 100%;
@@ -32,7 +36,3 @@
 
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important; }
-
-.jumbotron {
-  background-image: url("/docs/images/tetris.png");
-  background-size: cover; }

@@ -23,10 +23,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //require routes
 require('./server/routes')(app);
 
-// Setup a default catch-all route that sends back a welcome message in JSON format.
-app.get('*', (req, res) => res.status(200).send({
-  message: 'Welcome to LabStruggles',
-}));
+// Default catchall that reroutes back to home
+app.get('*', (req, res) => {
+  res.redirect('/')
+})
 
 module.exports = app;
 

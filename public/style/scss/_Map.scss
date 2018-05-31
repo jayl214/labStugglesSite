@@ -4,21 +4,28 @@
   width: 100%;
 }
 
-//style of post container within popup
-.post-container{
+//style of map popups
+.post-container {
   max-height: 200px;
   overflow: scroll;
+  .container{
+    .row{
+      .col{
+        padding: 5px;
+        a{
+          .post {
+            height: 100px;
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
 }
 
-//style of individual post within post container
-.post{
-  height: 100px;
-  width: 100px;
-}
-
-//increase width at large enough screen size
+//increase width of popup on large screen (2 pics per row)
 @media (min-width: 576px) {
   .post-container.many-post{
-    width: 260px;
+    width: 220px;
   }
 }

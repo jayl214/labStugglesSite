@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
 body {
   font-family: "Neucha", cursive; }
 
@@ -36,3 +37,32 @@ body {
 
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important; }
+
+.box {
+  background: #fff;
+  border: solid black;
+  border-color: black; }
+
+.box1 {
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%; }
+
+.box2 {
+  border-width: 3px 3px 5px 5px;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%; }
+
+.box3 {
+  border-width: 5px 3px 3px 5px;
+  border-radius: 95% 4% 97% 5%/4% 94% 3% 95%; }
+
+.evenboxinner {
+  transform: rotate(2deg);
+  margin: 15px;
+  padding: 0 5px;
+  float: right;
+  background: #ddd;
+  border: 1px solid #222;
+  box-shadow: 3px 3px 0 #222; }
+
+.spacer {
+  background-color: red; }

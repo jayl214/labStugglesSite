@@ -20,6 +20,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.get('*', (req, res) => {
+  res.redirect('https://' + req.headers.host + req.url);
+})
+
 //require routes
 require('./server/routes')(app);
 
@@ -29,5 +33,4 @@ app.get('*', (req, res) => {
 })
 
 module.exports = app;
-
 

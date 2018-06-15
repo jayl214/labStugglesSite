@@ -19,18 +19,17 @@
   height: 375px;
   background-repeat: no-repeat;
   h1{
-      font-size: 2.75rem;
+    font-size: 2.75rem;
   }
 
   .btn{
     // background-color: #d9fffe;
     // background-color:rgb(181, 255, 181);
     background-color: white;
-    border: none;
+    border-color: black;
     color: black;
 
     &:hover{
-      // color: white;
       background-color:rgb(181, 255, 181);
       text-decoration: underline;
     }

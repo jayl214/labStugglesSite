@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
 
+.comic-carousel{
+  margin-bottom: 30px;
+}
+
 //responsive carousel
 .carousel{
   width: 100%;
@@ -56,4 +60,18 @@
 
 .spacer{
   // background-color: red;
+}
+
+.more-comics{
+  text-align: center;
+  margin-bottom: 30px;
+  a{
+    width: 50%;
+    background-color: white;
+    // border-color: #d9fffe;
+    border: none;
+    background-image: url(https://i.pinimg.com/originals/97/76/2f/97762f73c801893ce8cd0f3e20d1e727.jpg);
+    background-size: 100% 100%;
+    color: black;
+  }
 }

@@ -22,7 +22,7 @@ body {
     font-size: 2.75rem; }
   .map-jumbotron .btn {
     background-color: white;
-    border: none;
+    border-color: black;
     color: black; }
     .map-jumbotron .btn:hover {
       background-color: #b5ffb5;
@@ -48,6 +48,9 @@ body {
 @media (min-width: 576px) {
   .post-container.many-post {
     width: 220px; } }
+
+.comic-carousel {
+  margin-bottom: 30px; }
 
 .carousel {
   width: 100%;
@@ -89,6 +92,17 @@ body {
   background: #ddd;
   border: 1px solid #222;
   box-shadow: 3px 3px 0 #222; }
+
+.more-comics {
+  text-align: center;
+  margin-bottom: 30px; }
+  .more-comics a {
+    width: 50%;
+    background-color: white;
+    border: none;
+    background-image: url(https://i.pinimg.com/originals/97/76/2f/97762f73c801893ce8cd0f3e20d1e727.jpg);
+    background-size: 100% 100%;
+    color: black; }
 
 .about-banner {
   max-width: 100%;

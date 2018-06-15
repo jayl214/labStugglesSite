@@ -1,0 +1,21 @@
+.about-banner{
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+}
+
+.portrait{
+  margin-bottom: 40px;
+  height: 120px;
+  &.portrait-left{
+    text-align: center;
+  }
+  &.portrait-right{
+    text-align: center;
+}
+
+  img{
+    height: 100%;
+    width: auto;
+  }
+}

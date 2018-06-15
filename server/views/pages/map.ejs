@@ -21,19 +21,22 @@
   <%- include ../partials/navbar.ejs %>
 
   <main>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-3">Labstruggles Goes Global!</h1>
-        <p class="lead">The <b class="font-weight-bold">Labstruggles Foster Initiative</b> seeks to bring together researchers from all fields and from all around the world.</p>
-        <hr class="my-4">
-        <p>It's like the Sisterhood of the Travelling Pants but with more science.</p>
+    <div class="jumbotron jumbotron-fluid map-jumbotron">
+      <div class="container" style="color: white;">
+        <h1 class="display-3" >Labstruggles Goes Global!</h1>
+
+        <div class="blurb">
+          <p class="lead">The <b class="font-weight-bold">Labstruggles Foster Initiative</b> seeks to bring together researchers from all fields and from all around the world.</p>
+          <p class="d-none d-md-block">It's like the Sisterhood of the Travelling Pants but with more science.</p>
+        </div>
+
         <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn More</a>
+          <a class="btn btn-primary btn-lg" href="#learn-more" role="button">Learn More</a>
         </p>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container map-container">
       <div class="row">
         <h1>Where we've been:</h1>
       </div>
@@ -44,7 +47,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col" id="learn-more">
           <h1>Labstruggles</h1>
         </div>
       </div>

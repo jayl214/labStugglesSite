@@ -2,7 +2,7 @@
 $(document).ready(()=>{
 
   // initialize map with default coords and zoom level
-  let mymap = L.map('mapid').setView([45.5048, -73.5772], 4)
+  let mymap = L.map('mapid', {scrollWheelZoom: false,} ).setView([45.5048, -73.5772], 4)
 
   //restrict panning to world map
   const southWest = L.latLng(-89.98155760646617, -180), northEast = L.latLng(89.99346179538875, 180);

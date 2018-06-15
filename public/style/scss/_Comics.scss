@@ -65,13 +65,17 @@
 .more-comics{
   text-align: center;
   margin-bottom: 30px;
-  a{
-    width: 50%;
-    background-color: white;
-    // border-color: #d9fffe;
+  .btn{
+    width: 40%;
+    background-color: transparent;
     border: none;
-    background-image: url(https://i.pinimg.com/originals/97/76/2f/97762f73c801893ce8cd0f3e20d1e727.jpg);
+    background-image: url('../../docs/images/bluesplotch.png');
     background-size: 100% 100%;
     color: black;
+
+    &:hover{
+      background-image: url('../../docs/images/greensplotch.png');
+      text-decoration: underline;
+    }
   }
 }

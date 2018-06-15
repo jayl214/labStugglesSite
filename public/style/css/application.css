@@ -21,11 +21,12 @@ body {
   .map-jumbotron h1 {
     font-size: 2.75rem; }
   .map-jumbotron .btn {
-    background-color: white;
-    border-color: black;
+    border: none;
+    background-image: url("../../docs/images/bluesplotch.png");
+    background-size: 100% 100%;
     color: black; }
     .map-jumbotron .btn:hover {
-      background-color: #b5ffb5;
+      background-image: url("../../docs/images/greensplotch.png");
       text-decoration: underline; }
 
 @media (min-width: 576px) {
@@ -96,13 +97,16 @@ body {
 .more-comics {
   text-align: center;
   margin-bottom: 30px; }
-  .more-comics a {
-    width: 50%;
-    background-color: white;
+  .more-comics .btn {
+    width: 40%;
+    background-color: transparent;
     border: none;
-    background-image: url(https://i.pinimg.com/originals/97/76/2f/97762f73c801893ce8cd0f3e20d1e727.jpg);
+    background-image: url("../../docs/images/bluesplotch.png");
     background-size: 100% 100%;
     color: black; }
+    .more-comics .btn:hover {
+      background-image: url("../../docs/images/greensplotch.png");
+      text-decoration: underline; }
 
 .about-banner {
   max-width: 100%;

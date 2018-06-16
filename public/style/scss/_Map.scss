@@ -13,7 +13,7 @@
 
 
 .map-jumbotron{
-  background-image:url('../../docs/images/eiffel_banner.jpg');
+  background-image: url('../../docs/images/eiffel_banner_sm.png');
   background-position: center;
   background-size:100%;
   height: 375px;
@@ -37,6 +37,7 @@
 
 @media (min-width: 576px) {
   .map-jumbotron{
+    background-image:url('../../docs/images/eiffel_banner.jpg');
     h1{
       font-size: 3rem;
     }

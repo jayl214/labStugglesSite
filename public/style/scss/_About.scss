@@ -1,8 +1,26 @@
 .about-banner{
-  max-width: 100%;
-  height: auto;
-  padding-bottom: 40px;
+  text-align: center;
+  .about-banner-picture{
+    width: 100%;
+    padding-bottom: 3%;
+  }
 }
+
+@media (min-width: 991.98px) {
+  .about-banner{
+    .about-banner-picture{
+      width: 80%;
+    }
+  }
+}
+
+
+// .about-banner{
+//   width: 80%;
+//   height: auto;
+//   padding-bottom: 40px;
+//   margin: auto;
+// }
 
 .portrait{
   margin-bottom: 40px;
@@ -12,10 +30,5 @@
   }
   &.portrait-right{
     text-align: center;
-}
-
-  img{
-    height: 100%;
-    width: auto;
   }
 }

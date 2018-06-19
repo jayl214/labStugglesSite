@@ -155,7 +155,7 @@ body {
 
 .more-comics {
   text-align: center;
-  margin-bottom: 30px; }
+  padding-bottom: 3%; }
   .more-comics .btn {
     width: 40%;
     background-color: transparent;
@@ -168,9 +168,14 @@ body {
       text-decoration: underline; }
 
 .about-banner {
-  max-width: 100%;
-  height: auto;
-  padding-bottom: 40px; }
+  text-align: center; }
+  .about-banner .about-banner-picture {
+    width: 100%;
+    padding-bottom: 3%; }
+
+@media (min-width: 991.98px) {
+  .about-banner .about-banner-picture {
+    width: 80%; } }
 
 .portrait {
   margin-bottom: 40px;
@@ -179,6 +184,3 @@ body {
     text-align: center; }
   .portrait.portrait-right {
     text-align: center; }
-  .portrait img {
-    height: 100%;
-    width: auto; }

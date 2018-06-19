@@ -2,6 +2,45 @@
 body {
   font-family: "Neucha", cursive; }
 
+.home-logo {
+  padding-top: 5%; }
+
+.row.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end; }
+  .row.buttons div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+
+.btn-home div {
+  width: 270px;
+  height: 130px;
+  position: relative; }
+  .btn-home div img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto; }
+  .btn-home div p {
+    text-align: center;
+    color: black;
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold; }
+  .btn-home div.home-comic p {
+    left: 100px;
+    top: 90px; }
+  .btn-home div.home-foster p {
+    left: 70px;
+    top: 95px; }
+
+.row-decoration {
+  padding-top: 40px; }
+
 .footer {
   height: 76px;
   background-color: #f8f9fa; }
@@ -9,7 +48,7 @@ body {
 .map-container {
   padding-bottom: 20px; }
   .map-container #mapid {
-    height: 400px;
+    height: 475px;
     width: 100%; }
 
 .map-jumbotron {

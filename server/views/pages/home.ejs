@@ -9,19 +9,55 @@
 
 <main>
 
-  <div>
-    <ul>
-      <li><a href="/comics">Comics</a></li>
-      <li class="map"><a href="/map">Map</a></li>
-    </ul>
+  <div class="container">
+
+    <div class="row">
+      <div class="col">
+        <h1 class="home-logo" style="font-size:5rem">Labstruggles</h1>
+      </div>
+    </div>
+
+    <div class="row buttons">
+
+      <!-- <img src="docs/images/cloud.png" height="50" width="70"> -->
+
+
+      <div>
+        <div class="btn-home" href="/comics" role="button">
+          <div class="home-comic">
+            <a href="comics">
+              <img src="docs/images/buttoncloud1.png">
+              <p>Comics</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="btn-home" href="/comics" role="button">
+          <div class="home-foster">
+            <a href="map">
+              <img src="docs/images/buttoncloud2.png">
+              <p>Foster Program</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row row-decoration" style="display:flex; align-items: center;">
+      <img src="docs/images/pair_cloud.png" height="300" width="426.81">
+      <img src="docs/images/cloud.png" height="50" width="70" style="margin-left:10%;">
+    </div>
+
+
   </div>
+
 </main>
 
 
 
 <%- include ../partials/bootstrapScripts.ejs %>
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 <script src="scripts/home.js"></script>
 
 </body>

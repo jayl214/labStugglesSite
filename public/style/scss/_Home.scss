@@ -1,0 +1,89 @@
+// .btn-home{
+//   font-size: 1.5rem;
+//   line-height: 4rem;
+//   border: none;
+//   background-size: 100% 100%;
+//   color: black;
+//   &.home-comic{
+//     background-image: url('../../docs/images/cloud_comic.png');
+//     &:hover{
+//       background-image: url('../../docs/images/cloud_comic_highlight.png');
+//       text-decoration: underline;
+//     }
+//   }
+
+//   &.home-foster{
+//     background-image: url('../../docs/images/cloud_foster.png');
+//     &:hover{
+//       background-image: url('../../docs/images/cloud_foster_highlight.png');
+//       text-decoration: underline;
+//     }
+//   }
+// }
+
+.home-logo{
+  padding-top: 5%;
+}
+
+.row.buttons{
+  display: flex;
+  // justify-content: space-around;
+  justify-content: flex-end;
+
+  align-items:flex-end;
+
+  div{
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.btn-home{
+  div{
+    width: 270px;
+    height: 130px;
+    position:relative;
+
+    img{
+      position:absolute;
+      left:0;
+      top:0;
+      width: 100%;
+      height: auto;
+    }
+
+    p{
+      text-align: center;
+      color: black;
+      // z-index:100;
+      position:absolute;
+      font-size:24px;
+      font-weight:bold;
+      &:hover{
+        // text-decoration: underline;
+      }
+    }
+
+    &.home-comic{
+      p{
+        left:100px;
+        top:90px;
+      }
+
+    }
+    &.home-foster{
+      p{
+        left:70px;
+        top:95px;
+      }
+
+    }
+
+  }
+}
+
+.row-decoration{
+  padding-top: 40px;
+}

@@ -1,25 +1,31 @@
-// .btn-home{
-//   font-size: 1.5rem;
-//   line-height: 4rem;
-//   border: none;
-//   background-size: 100% 100%;
-//   color: black;
-//   &.home-comic{
-//     background-image: url('../../docs/images/cloud_comic.png');
-//     &:hover{
-//       background-image: url('../../docs/images/cloud_comic_highlight.png');
-//       text-decoration: underline;
-//     }
-//   }
+.row.logo{
+  .col{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-//   &.home-foster{
-//     background-image: url('../../docs/images/cloud_foster.png');
-//     &:hover{
-//       background-image: url('../../docs/images/cloud_foster_highlight.png');
-//       text-decoration: underline;
-//     }
-//   }
-// }
+    img{
+      width: 55px
+    }
+    h1{
+      font-size: 55px;
+    }
+  }
+}
+
+@media (min-width: 475px) {
+  .row.logo{
+    .col{
+      img{
+        height: 80px;
+        width: 80px;
+      }
+      h1{
+        font-size: 80px;
+      }
+    }
+  }
+}
 
 .home-logo{
   padding-top: 5%;

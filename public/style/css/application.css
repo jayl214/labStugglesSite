@@ -2,6 +2,22 @@
 body {
   font-family: "Neucha", cursive; }
 
+.row.logo .col {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .row.logo .col img {
+    width: 55px; }
+  .row.logo .col h1 {
+    font-size: 55px; }
+
+@media (min-width: 475px) {
+  .row.logo .col img {
+    height: 80px;
+    width: 80px; }
+  .row.logo .col h1 {
+    font-size: 80px; } }
+
 .home-logo {
   padding-top: 5%; }
 

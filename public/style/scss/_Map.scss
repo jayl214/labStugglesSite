@@ -18,19 +18,32 @@
   background-size:100%;
   height: 375px;
   background-repeat: no-repeat;
-  h1{
-    font-size: 2.75rem;
-  }
 
-  .btn{
-    border: none;
-    background-image: url('../../docs/images/bluesplotch.png');
-    background-size: 100% 100%;
-    color: black;
+  display: flex;
+  align-items: flex-start;
 
-    &:hover{
-      background-image: url('../../docs/images/greensplotch.png');
+  .container{
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-flow:column;
+    text-align: center;
+
+    h1{
+      font-size: 2.75rem;
+    }
+    .btn{
+      width: 150px;
+      border: none;
+      background-image: url('../../docs/images/bluesplotch.png');
+      background-size: 100% 100%;
+      color: black;
       text-decoration: underline;
+
+      &:hover{
+        background-image: url('../../docs/images/greensplotch.png');
+      }
     }
   }
 }
@@ -38,6 +51,13 @@
 @media (min-width: 576px) {
   .map-jumbotron{
     background-image:url('../../docs/images/eiffel_banner.jpg');
+
+    .container{
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+
+    }
     h1{
       font-size: 3rem;
     }

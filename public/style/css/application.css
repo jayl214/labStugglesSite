@@ -73,7 +73,7 @@ body {
   background-image: url("../../docs/images/eiffel_banner_sm.png");
   background-position: center;
   background-size: 100%;
-  height: 375px;
+  height: 400px;
   background-repeat: no-repeat;
   display: flex;
   align-items: flex-start; }
@@ -197,3 +197,6 @@ body {
     text-align: center; }
   .portrait.portrait-right {
     text-align: center; }
+
+.about-people {
+  min-width: 200px; }

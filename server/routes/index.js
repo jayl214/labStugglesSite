@@ -11,9 +11,9 @@ module.exports = (app) => {
     res.render('pages/home')
   });
 
-  app.get('/map',(req, res) => {
+  app.get('/foster',(req, res) => {
     //send template var pathname to for navbar highlight
-    res.render('pages/map', {"pathname": "map"})
+    res.render('pages/foster', {"pathname": "foster"})
   });
 
   app.get('/comics',(req, res) => {

@@ -2,13 +2,13 @@
 body {
   font-family: "Neucha", cursive; }
 
-.row.logo .col {
+.home-logo .col {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .row.logo .col img {
+  .home-logo .col img {
     width: 55px; }
-  .row.logo .col h1 {
+  .home-logo .col h1 {
     font-size: 55px; }
 
 @media (min-width: 475px) {
@@ -21,11 +21,13 @@ body {
 .home-logo {
   padding-top: 5%; }
 
-.row.buttons {
+.home-buttons {
   display: flex;
   justify-content: space-around;
   align-items: flex-end; }
-  .row.buttons div {
+  .home-buttons .home-buttons-deco {
+    margin-right: 10%; }
+  .home-buttons .home-buttons-buttons {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -122,7 +124,7 @@ body {
   .post-container.many-post {
     width: 240px; } }
 
-.comic-carousel {
+.comic {
   margin-bottom: 30px; }
 
 .carousel {
@@ -199,4 +201,10 @@ body {
     text-align: center; }
 
 .about-people {
-  min-width: 200px; }
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  min-width: 175px; }
+  .about-people .portrait {
+    height: 175px; }

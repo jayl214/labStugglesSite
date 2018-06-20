@@ -14,14 +14,6 @@
   }
 }
 
-
-// .about-banner{
-//   width: 80%;
-//   height: auto;
-//   padding-bottom: 40px;
-//   margin: auto;
-// }
-
 .portrait{
   margin-bottom: 40px;
   height: 120px;
@@ -34,5 +26,12 @@
 }
 
 .about-people{
-  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  min-width: 175px;
+  .portrait{
+    height: 175px;
+  }
 }

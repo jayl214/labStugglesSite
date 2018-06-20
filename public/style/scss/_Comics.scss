@@ -1,7 +1,12 @@
 // @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
 
-.comic-carousel{
+.comic{
   margin-bottom: 30px;
+  .comic-deco{
+    &.comic-deco-left{
+    }
+  }
+
 }
 
 //responsive carousel

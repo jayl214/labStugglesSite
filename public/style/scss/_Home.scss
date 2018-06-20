@@ -1,4 +1,4 @@
-.row.logo{
+.home-logo{
   .col{
     display:flex;
     justify-content:center;
@@ -31,14 +31,16 @@
   padding-top: 5%;
 }
 
-.row.buttons{
+.home-buttons{
   display: flex;
   justify-content: space-around;
-  // justify-content: flex-end;
-
   align-items:flex-end;
 
-  div{
+  .home-buttons-deco{
+    margin-right: 10%;
+  }
+
+  .home-buttons-buttons{
     display: flex;
     flex-direction:column;
     justify-content: flex-start;

@@ -34,16 +34,16 @@
 
         <div class=".d-none .d-lg-block .d-xl-none col-lg-8">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
-            <div class="carousel-inner box box3">
+            <div class="carousel-inner">
 
-              <div class="carousel-item active ">
-                <a href=<%=`${instaData[0].link}` %>><img class="d-block w-100" src=<%=`${instaData[0].images.standard_resolution.url}` %> alt="First slide" ></a>
+              <div class="carousel-item active">
+                <a href=<%=`${instaData[0].link}` %>><img class="d-block w-100 box box3" src=<%=`${instaData[0].images.standard_resolution.url}` %> alt="First slide" ></a>
               </div>
 
               <% instaData.splice(0,1)
                instaData.forEach( comic => { %>
               <div class="carousel-item ">
-                <a href=<%= `${comic.link}` %>><img class="d-block w-100" src=<%= `${comic.images.standard_resolution.url}` %> alt="First slide"></a>
+                <a href=<%= `${comic.link}` %>><img class="d-block w-100 box box3" src=<%= `${comic.images.standard_resolution.url}` %> alt="First slide"></a>
               </div>
               <% }) %>
 

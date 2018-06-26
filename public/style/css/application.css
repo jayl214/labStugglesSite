@@ -147,14 +147,6 @@ body {
   border: solid black;
   border-color: black; }
 
-.box1 {
-  border-width: 3px 4px 3px 5px;
-  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%; }
-
-.box2 {
-  border-width: 3px 3px 5px 5px;
-  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%; }
-
 .box3 {
   border-width: 5px 3px 3px 5px;
   border-radius: 95% 4% 97% 5%/4% 94% 3% 95%; }

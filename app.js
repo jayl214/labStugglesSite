@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 //set root directory for static files
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
 
 //set view engine to ejs
 app.set('view engine', 'ejs')

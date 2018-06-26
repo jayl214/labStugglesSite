@@ -61,10 +61,6 @@ body {
   .row-decoration img {
     top: -100px; }
 
-.footer {
-  height: 76px;
-  background-color: #f8f9fa; }
-
 .map-container {
   padding-bottom: 20px; }
   .map-container #mapid {

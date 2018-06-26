@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 })
 
 
-//require routes
+//all routes found index.js of routes
 require('./server/routes')(app);
 
 // Default catchall that reroutes back to home

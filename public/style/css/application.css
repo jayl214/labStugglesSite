@@ -66,6 +66,8 @@ body {
   .map-container #mapid {
     height: 475px;
     width: 100%; }
+  .map-container .contributors-header {
+    margin-top: 40px; }
 
 .map-jumbotron {
   background-image: url("../../docs/images/eiffel_banner_sm_compressed.png");

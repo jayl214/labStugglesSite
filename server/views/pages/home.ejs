@@ -1,70 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <%- include ../partials/head.ejs %>
-  <meta name="description" content="LabStruggles is an initiative aiming to better connect academic researchers with the general public, with the industry, and with each other. By highlighting the comical situations and misadventures faced by the average researcher, we hope make science a little less intimidating and a little more inviting to all."/>
+  <head>
+    <%- include ../partials/head.ejs %>
+    <meta name="description" content="LabStruggles is an initiative aiming to better connect academic researchers with the general public, with the industry, and with each other. By highlighting the comical situations and misadventures faced by the average researcher, we hope make science a little less intimidating and a little more inviting to all."/>
 
-</head>
+  </head>
 
-<body>
+  <body>
 
-<main>
-
-
-
-  <!-- <div class="container" style="background-image:url(docs/images/greensplotch.png);background-position: center; background-size:100% 100%;   background-repeat: no-repeat;"> -->
-  <div class="container" >
-    <div class="row home-logo">
-      <div class="col">
-        <img class="d-lg-none" src="docs/images/bust.png" >
-        <h1 class="home-logo" >LabStruggles</h1>
-      </div>
-    </div>
-
-    <div class="row home-buttons" >
-
-      <img class="d-none d-lg-block home-buttons-deco" src="docs/images/cloud.png" height="50" width="70">
-
-
-      <div class="home-buttons-buttons">
-        <div class="btn-home" role="button">
-          <div class="home-comic">
-            <a href="comics">
-              <img src="docs/images/buttoncloud1.png">
-              <p>Comics</p>
-            </a>
+    <main>
+      <div class="container" >
+        <div class="row home-logo">
+          <div class="col">
+            <img class="d-lg-none" src="docs/images/bust.png">
+            <h1 class="home-logo">LabStruggles</h1>
           </div>
         </div>
 
-        <div class="btn-home" role="button">
-          <div class="home-foster">
-            <a href="foster">
-              <img src="docs/images/buttoncloud2.png">
-              <p>Foster</p>
-            </a>
+        <div class="row home-buttons" >
+          <img class="d-none d-lg-block home-buttons-deco" src="docs/images/cloud.png" height="50" width="70">
+
+          <div class="home-buttons-buttons">
+            <div class="btn-home" role="button">
+              <div class="home-comic">
+                <a href="comics">
+                  <img src="docs/images/buttoncloud1.png">
+                  <p>Comics</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="btn-home" role="button">
+              <div class="home-foster">
+                <a href="foster">
+                  <img src="docs/images/buttoncloud2.png">
+                  <p>Foster</p>
+                </a>
+              </div>
+            </div>
           </div>
+
         </div>
+
+        <div class="row row-decoration d-none d-lg-block" >
+          <img src="docs/images/pair_cloud.png" height="300" width="426.81">
+        </div>
+
+        <div class="home-spacer d-lg-none">
+
+        </div>
+
+        <%- include ../partials/footer.ejs %>
+
       </div>
-
-    </div>
-
-    <div class="row row-decoration d-none d-lg-block" >
-      <img src="docs/images/pair_cloud.png" height="300" width="426.81">
-      <!-- <img src="docs/images/cloud.png" height="50" width="70" style="margin-left:10%;"> -->
-    </div>
-
-    <%- include ../partials/footer.ejs %>
-
-  </div>
-
-</main>
+    </main>
 
 
 
-<%- include ../partials/bootstrapScripts.ejs %>
+    <%- include ../partials/bootstrapScripts.ejs %>
 
-<script src="scripts/home.js"></script>
+    <script src="scripts/home.js"></script>
 
-</body>
+  </body>
 </html>

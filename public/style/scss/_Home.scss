@@ -53,7 +53,6 @@
     width: 270px;
     height: 130px;
     position:relative;
-
     img{
       position:absolute;
       left:0;
@@ -61,38 +60,35 @@
       width: 100%;
       height: auto;
     }
-
     p{
       text-align: center;
       color: black;
-      // z-index:100;
       position:absolute;
       font-size:24px;
       font-weight:bold;
     }
-
     &.home-comic{
       p{
         left: 110px;
         top: 90px;
       }
-
     }
     &.home-foster{
       p{
         left: 110px;
         top: 95px;
       }
-
     }
-
   }
 }
 
 .row-decoration{
   padding-bottom: 5%;
-  // top: 0px;
   img{
     top: -100px;
   }
+}
+
+.home-spacer{
+  height: 25vh;
 }

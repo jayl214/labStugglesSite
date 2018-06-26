@@ -25,26 +25,26 @@ module.exports = (app) => {
       //raw data from instagram request listing recent posts in array form
       let recentInstaPosts = JSON.parse(body).data
 
-      //instagram posts that are comics, aka not having the "labstrugglesfoster" tag
-      const comicInstaPosts = removePostsHavingGivenTag("labstrugglesfoster", recentInstaPosts)
+      //instagram posts that are comics, aka not having the labstrugglesfoster or twitter tags
+      const comicInstaPosts = removePostsHavingTags(["labstrugglesfoster", "twitter"], recentInstaPosts)
 
       res.render('pages/comics', {"pathname": "comics", "comicInstaPosts": comicInstaPosts})
     });
 
-    //function that takes array of instagram posts and returns a version eliminating all posts having a given tag
-    const removePostsHavingGivenTag = (tagToRemove, instaData) =>{
+    //function that takes array of instagram posts and returns a version eliminating all posts having given tags
+    const removePostsHavingTags = (tagsToRemove, instaData) =>{
 
-        //function that checkes presence of a tag in a single post
-        const verifyPresenceOfTag = (tagToCheck, post)=>{
+        //function that checkes presence of tags in a single post
+        const verifyPresenceOfTags = (tagsToCheck, post)=>{
           return post.tags.some((tag)=>{
-            return tag === tagToCheck
+            return tag === tagsToCheck[0] || tag === tagsToCheck[1]
           })
         }
 
         const modifiedDataSet = []
 
         instaData.forEach((post)=>{
-          if(!verifyPresenceOfTag(tagToRemove, post)){
+          if(!verifyPresenceOfTags(tagsToRemove, post)){
             modifiedDataSet.push(post)
           }
         })

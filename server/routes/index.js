@@ -21,10 +21,37 @@ module.exports = (app) => {
     request(`http://api.instagram.com/v1/users/self/media/recent/?access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`, function (error, response, body) {
       console.log('error:', error); // Print the error if one occurred
       console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-      let bodyData = JSON.parse(body).data
 
-      res.render('pages/comics', {"pathname": "comics", "instaData": bodyData})
+      //raw data from instagram request listing recent posts in array form
+      let recentInstaPosts = JSON.parse(body).data
+
+      //instagram posts that are comics, aka not having the "labstrugglesfoster" tag
+      const comicInstaPosts = removePostsHavingGivenTag("labstrugglesfoster", recentInstaPosts)
+
+      res.render('pages/comics', {"pathname": "comics", "comicInstaPosts": comicInstaPosts})
     });
+
+    //function that takes array of instagram posts and returns a version eliminating all posts having a given tag
+    const removePostsHavingGivenTag = (tagToRemove, instaData) =>{
+
+        //function that checkes presence of a tag in a single post
+        const verifyPresenceOfTag = (tagToCheck, post)=>{
+          return post.tags.some((tag)=>{
+            return tag === tagToCheck
+          })
+        }
+
+        const modifiedDataSet = []
+
+        instaData.forEach((post)=>{
+          if(!verifyPresenceOfTag(tagToRemove, post)){
+            modifiedDataSet.push(post)
+          }
+        })
+
+        return modifiedDataSet
+    }
+
   });
 
   app.get('/about',(req, res) => {

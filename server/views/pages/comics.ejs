@@ -37,11 +37,11 @@
             <div class="carousel-inner">
 
               <div class="carousel-item active">
-                <a href=<%=`${instaData[0].link}` %>><img class="d-block w-100 box box3" src=<%=`${instaData[0].images.standard_resolution.url}` %> alt="First slide" ></a>
+                <a href=<%=`${comicInstaPosts[0].link}` %>><img class="d-block w-100 box box3" src=<%=`${comicInstaPosts[0].images.standard_resolution.url}` %> alt="First slide" ></a>
               </div>
 
-              <% instaData.splice(0,1)
-               instaData.forEach( comic => { %>
+              <% comicInstaPosts.splice(0,1)
+               comicInstaPosts.forEach( comic => { %>
               <div class="carousel-item ">
                 <a href=<%= `${comic.link}` %>><img class="d-block w-100 box box3" src=<%= `${comic.images.standard_resolution.url}` %> alt="First slide"></a>
               </div>

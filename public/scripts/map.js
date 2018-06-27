@@ -101,15 +101,18 @@ $(document).ready(()=>{
 
       //toggle popup on zoom level
       mymap.on("zoomend", function(){
-        zoomLev = mymap.getZoom();
-        console.log(zoomLev)
-        if (zoomLev > 3){
+        zoomLevel = mymap.getZoom();
+        if (zoomLevel > 3){
           popupLayer.forEach((popup)=>{
-            mymap.addLayer(popup)
+            if(!popup.isOpen()){
+              mymap.addLayer(popup)
+            }
           })
-        }else if(zoomLev < 4){
+        }else if(zoomLevel < 4){
           popupLayer.forEach((popup)=>{
-            mymap.removeLayer(popup)
+            if(popup.isOpen()){
+              mymap.removeLayer(popup)
+            }
           })
         }
       })

@@ -178,6 +178,8 @@ body {
 .about-banner {
   text-align: center; }
   .about-banner .about-banner-picture {
+    max-height: 273px;
+    max-width: 745px;
     width: 100%;
     padding-bottom: 3%; }
 

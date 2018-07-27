@@ -22,4 +22,7 @@ module.exports = {
       .then(fosterposts => res.status(200).send(fosterposts))
       .catch(error => res.status(400).send(error));
   },
+  // delete(req, res) {
+  //   return
+  // }
 };

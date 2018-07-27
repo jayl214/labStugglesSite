@@ -63,7 +63,8 @@ $(document).ready(()=>{
         }else{ //if the coords already exist, append data of new post to existing obj
           let existingPopup = uniquePopupObj[`${coord}`]
 
-          existingPopup.singleOrManyPost = "many-post"
+          // // makes popup fatter if more than one post
+          // existingPopup.singleOrManyPost = "many-post"
 
           existingPopup["posts"].push({
             "postId" : post.id,

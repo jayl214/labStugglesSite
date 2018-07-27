@@ -1,7 +1,6 @@
 $(window).on('load', function() {
     // When the page has loaded
-    $("main").fadeIn(500);
-  });
+  $("main").fadeIn(500);
   $(".home-comic").on("mouseenter", ()=>{
     $(".home-comic").find("img").attr('src','docs/images/buttoncloud1hover.png')
   })
@@ -16,3 +15,5 @@ $(window).on('load', function() {
   $(".home-foster").on("mouseleave", ()=>{
     $(".home-foster").find("img").attr('src','docs/images/buttoncloud2.png')
   })
+
+});

@@ -6,10 +6,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .home-logo .col img {
-    width: 55px; }
-  .home-logo .col h1 {
-    font-size: 55px; }
+  .home-logo .col .home-logo-img {
+    width: 4rem;
+    margin-right: .5rem; }
+  .home-logo .col .home-logo-header {
+    font-size: 2.75rem;
+    margin: .75rem 0 0 0; }
 
 @media (min-width: 475px) {
   .row.logo .col img {

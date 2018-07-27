@@ -1,5 +1,9 @@
-$(document).ready(()=>{
+$(window).on('load', function() {
+  // When the page has loaded
+  $("body").fadeIn(1000);
+});
 
+$(document).ready(()=>{
 
   $(".home-comic").on("mouseenter", ()=>{
     $(".home-comic").find("img").attr('src','docs/images/buttoncloud1hover.png')

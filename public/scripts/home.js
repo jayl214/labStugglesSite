@@ -1,10 +1,7 @@
 $(window).on('load', function() {
-  // When the page has loaded
-  $("body").fadeIn(1000);
-});
-
-$(document).ready(()=>{
-
+    // When the page has loaded
+    $("main").fadeIn(500);
+  });
   $(".home-comic").on("mouseenter", ()=>{
     $(".home-comic").find("img").attr('src','docs/images/buttoncloud1hover.png')
   })
@@ -19,4 +16,3 @@ $(document).ready(()=>{
   $(".home-foster").on("mouseleave", ()=>{
     $(".home-foster").find("img").attr('src','docs/images/buttoncloud2.png')
   })
-})

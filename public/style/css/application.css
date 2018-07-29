@@ -1,17 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+@import url(https://fonts.googleapis.com/css?family=Didact+Gothic);
 body {
-  font-family: "Neucha", cursive; }
+  font-family: "Didact Gothic", sans-serif; }
+  body .navbar {
+    font-family: "Neucha", cursive; }
+  body .footer {
+    font-family: "Neucha", cursive; }
+  body .header {
+    font-family: "Neucha", cursive; }
+  body .btn {
+    font-family: "Neucha", cursive; }
 
-.home-logo .col {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .home-logo .col .home-logo-img {
-    width: 4rem;
-    margin-right: .5rem; }
-  .home-logo .col .home-logo-header {
-    font-size: 2.75rem;
-    margin: .75rem 0 0 0; }
+.home-logo {
+  font-family: "Neucha", cursive; }
+  .home-logo .col {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .home-logo .col .home-logo-img {
+      width: 4rem;
+      margin-right: .5rem; }
+    .home-logo .col .home-logo-header {
+      font-size: 2.75rem;
+      margin: .75rem 0 0 0; }
 
 @media (min-width: 475px) {
   .row.logo .col img {
@@ -24,6 +35,7 @@ body {
   padding-top: 5%; }
 
 .home-buttons {
+  font-family: "Neucha", cursive;
   display: flex;
   justify-content: space-around;
   align-items: flex-end; }
@@ -132,43 +144,31 @@ body {
 
 .comic {
   margin-bottom: 30px; }
-
-.carousel {
-  width: 100%;
-  margin: 0 auto; }
-
-@media (min-width: 800px) {
-  .carousel {
-    width: 600px;
-    margin: 0 auto; } }
-
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important; }
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important; }
-
-.box {
-  background: #fff;
-  border: solid black;
-  border-color: black; }
-
-.box3 {
-  border-width: 5px 3px 3px 5px;
-  border-radius: 95% 4% 97% 5%/4% 94% 3% 95%; }
-
-.evenboxinner {
-  transform: rotate(2deg);
-  margin: 15px;
-  padding: 0 5px;
-  float: right;
-  background: #ddd;
-  border: 1px solid #222;
-  box-shadow: 3px 3px 0 #222; }
+  .comic .spacer {
+    display: flex;
+    align-items: flex-end; }
+  .comic .carousel {
+    width: 100%;
+    margin: 0 auto; }
+    .comic .carousel .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important; }
+    .comic .carousel .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important; }
+    .comic .carousel .comic-border {
+      background: #fff;
+      border: solid black;
+      border-color: black;
+      border-width: 5px 3px 3px 5px;
+      border-radius: 95% 4% 97% 5%/4% 94% 3% 95%; }
+  @media (min-width: 800px) {
+    .comic .carousel {
+      width: 600px;
+      margin: 0 auto; } }
 
 .more-comics {
   text-align: center;
-  padding-bottom: 3%; }
+  padding-bottom: 3%;
+  font-family: "Neucha", cursive; }
   .more-comics .btn {
     width: 40%;
     background-color: transparent;
@@ -177,8 +177,7 @@ body {
     background-size: 100% 100%;
     color: black; }
     .more-comics .btn:hover {
-      background-image: url("../../docs/images/greensplotch.png");
-      text-decoration: underline; }
+      background-image: url("../../docs/images/greensplotch.png"); }
 
 .about-banner {
   text-align: center; }

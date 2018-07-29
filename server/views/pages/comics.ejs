@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-2"></div>
 
-        <div class="col-8">
+        <div class="col-8 header">
           <h2>Recent Comics</h2>
         </div>
 
@@ -28,7 +28,7 @@
       <!-- comic carousel -->
       <div class="row comic">
 
-        <div class=".d-none .d-lg-block .d-xl-none col-lg-2 spacer" style="display:flex; align-items:flex-end;">
+        <div class=".d-none .d-lg-block .d-xl-none col-lg-2 spacer" >
           <img class="d-none d-xl-block comic-deco comic-deco-left" src="docs/images/pair.png" height="170">
         </div>
 
@@ -37,13 +37,13 @@
             <div class="carousel-inner">
 
               <div class="carousel-item active">
-                <a href=<%=`${comicInstaPosts[0].link}` %>><img class="d-block w-100 box box3" src=<%=`${comicInstaPosts[0].images.standard_resolution.url}` %> alt="First slide" ></a>
+                <a href=<%=`${comicInstaPosts[0].link}` %>><img class="d-block w-100 comic-border" src=<%=`${comicInstaPosts[0].images.standard_resolution.url}` %> alt="First slide" ></a>
               </div>
 
               <% comicInstaPosts.splice(0,1)
                comicInstaPosts.forEach( comic => { %>
               <div class="carousel-item ">
-                <a href=<%= `${comic.link}` %>><img class="d-block w-100 box box3" src=<%= `${comic.images.standard_resolution.url}` %> alt="First slide"></a>
+                <a href=<%= `${comic.link}` %>><img class="d-block w-100 comic-border" src=<%= `${comic.images.standard_resolution.url}` %> alt="First slide"></a>
               </div>
               <% }) %>
 

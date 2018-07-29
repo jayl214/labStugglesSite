@@ -1,7 +1,16 @@
 
 body{
-  font-family: $font-stack;
-  .navbar-light{
-    // background-color: #e7ffff;
+  font-family: $font-sans-serif;
+  .navbar{
+    font-family: $font-header;
+  }
+  .footer{
+    font-family: $font-header;
+  }
+  .header{
+    font-family: $font-header;
+  }
+  .btn{
+    font-family: $font-header;
   }
 }

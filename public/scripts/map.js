@@ -98,31 +98,7 @@ $(document).ready(()=>{
       for (let key in uniquePopupObj){
         let marker = placeMarkers(uniquePopupObj[key].coord)
         marker.bindPopup(setPopup(uniquePopupObj[key].popup), {closeOnClick: false, autoClose: true}).openPopup()
-        // marker.bindTooltip(uniquePopupObj[key].popup, {permanent: false, autoClose: false})
-        // let marker = L.marker(uniquePopupObj[key].coord).addTo(mymap)
       }
-
-      //toggle popup on zoom level
-      // mymap.on("zoomend", function(){
-      //   zoomLevel = mymap.getZoom();
-      //   if (zoomLevel > 3){
-      //     popupLayer.forEach((popup)=>{
-      //       if(!popup.isOpen()){
-      //         mymap.addLayer(popup)
-      //       }
-      //     })
-      //   }else if(zoomLevel < 4){
-      //     popupLayer.forEach((popup)=>{
-      //       if(popup.isOpen()){
-      //         mymap.removeLayer(popup)
-      //       }
-      //     })
-      //   }
-      // })
-
-      // popupLayer.forEach((popup)=>{
-      //       mymap.addLayer(popup)
-      //     })
 
     } // ajax req success close
   }) //ajax close
@@ -133,14 +109,8 @@ $(document).ready(()=>{
   }
 
   //place popup containing html at coord
-  // function setPopup(coordSet, content){
   function setPopup(content){
-    return L.popup()
-              // .setLatLng(coordSet)
-              .setContent(content)
-              .on('click',
-                console.log('clicked')
-              )
+    return L.popup().setContent(content)
   }
 
 //document ready

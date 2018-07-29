@@ -68,7 +68,7 @@ body {
 
 .map-container {
   padding-bottom: 20px; }
-  .map-container #mapid {
+  .map-container #map {
     height: 475px;
     width: 100%; }
   .map-container .contributors-header {
@@ -87,7 +87,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    text-align: center; }
+    text-align: center;
+    color: white; }
     .map-jumbotron .container h1 {
       font-size: 2.75rem; }
     .map-jumbotron .container .btn {
@@ -95,8 +96,7 @@ body {
       border: none;
       background-image: url("../../docs/images/bluesplotch.png");
       background-size: 100% 100%;
-      color: black;
-      text-decoration: underline; }
+      color: black; }
       .map-jumbotron .container .btn:hover {
         background-image: url("../../docs/images/greensplotch.png"); }
 
@@ -104,11 +104,14 @@ body {
   .map-jumbotron {
     background-image: url("../../docs/images/eiffel_banner_compressed.jpg"); }
     .map-jumbotron .container {
-      justify-content: flex-start;
+      margin-top: 5rem;
       align-items: flex-start;
       text-align: left; }
     .map-jumbotron h1 {
-      font-size: 3rem; } }
+      font-size: 3rem; }
+    .map-jumbotron .btn {
+      margin-top: .5rem;
+      outline: none; } }
 
 @media (min-width: 768px) {
   .map-jumbotron h1 {

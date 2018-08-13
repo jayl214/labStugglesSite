@@ -4,17 +4,17 @@ Homepage for a webcomic and science outreach program.
 Visit at https://www.labstruggles.com/about or see more LabStruggles comics at https://www.instagram.com/labstruggles/
 
 ## Screenshots
-###Home:
+### Home:
 !["landing"](https://github.com/jayl214/labStugglesSite/blob/master/public/docs/screenshots/landing.png)
 
-###Comics:
+### Comics:
 !["comic"](https://github.com/jayl214/labStugglesSite/blob/master/public/docs/screenshots/comic.png)
 
-###Foster Program:
+### Foster Program:
 !["foster_pt1"](https://github.com/jayl214/labStugglesSite/blob/master/public/docs/screenshots/foster_pt1.png)
 !["foster_pt2"](https://github.com/jayl214/labStugglesSite/blob/master/public/docs/screenshots/foster_pt2.png)
 
-###About:
+### About:
 !["about"](https://github.com/jayl214/labStugglesSite/blob/master/public/docs/screenshots/about.png)
 
 ## Dependancies:

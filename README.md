@@ -26,6 +26,6 @@ Visit at https://www.labstruggles.com/about or see more LabStruggles comics at h
 
 
 ## Getting Started
-1: Install dependencies (`npm install`)
-2: Start server (`npm run start:dev`)
-3: Go to localhost:8000
+- Install dependencies (`npm install`)
+- Start server (`npm run start:dev`)
+- Go to localhost:8000

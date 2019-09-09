@@ -1,40 +1,23 @@
-.about-banner{
-  text-align: center;
-  .about-banner-picture{
-    max-height: 273px;
-    max-width: 745px;
-    width: 100%;
-    padding-bottom: 3%;
+.about-container{
 
-  }
-}
+  height: 85vh;
 
-@media (min-width: 991.98px) {
   .about-banner{
+    text-align: center;
     .about-banner-picture{
-      width: 80%;
+      max-height: 200px;
+      max-width: 545px;
+      width: 100%;
+      padding-bottom: 3%;
+
     }
   }
-}
 
-.portrait{
-  margin-bottom: 40px;
-  height: 120px;
-  &.portrait-left{
-    text-align: center;
-  }
-  &.portrait-right{
-    text-align: center;
-  }
-}
-
-.about-people{
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  min-width: 175px;
-  .portrait{
-    height: 175px;
+  @media (min-width: 991.98px) {
+    .about-banner{
+      .about-banner-picture{
+        width: 80%;
+      }
+    }
   }
 }

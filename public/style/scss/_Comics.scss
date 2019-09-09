@@ -1,37 +1,18 @@
-.comic{
-  .spacer{
-    display:flex;
-    align-items:flex-end;
-  }
-  margin-bottom: 30px;
-  //responsive carousel
-  .carousel{
-    width: 100%;
-    margin: 0 auto;
-    // carousel black buttons
-    .carousel-control-prev-icon {
-     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-    }
-    .carousel-control-next-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-    }
-    //handdrawn border for comics
-    .comic-border{
-      background:#fff;
-      border: solid black;
-      border-color: black;
-      border-width: 5px 3px 3px 5px;
-      border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
-    }
-  }
-  //limit carousel max size
-  @media (min-width: 800px) {
-   .carousel{
-      width: 600px;
-      margin: 0 auto;
+.gallery__row{
+  display:flex;
+  justify-content: space-between;
+  .gallery__col{
+    justify-content: center;
+    padding-bottom: 5rem;
+    min-width: 400px;
+    max-width: 600px;
+    .gallery__img{
+      width: 100%;
+      cursor: pointer;
     }
   }
 }
+
 .more-comics{
   text-align: center;
   padding-bottom: 3%;
@@ -47,5 +28,19 @@
     &:hover{
       background-image: url('../../docs/images/greensplotch.png');
     }
+  }
+}
+
+.modal-content{
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  // border-radius: 10%;
+  .modal__img{
+    width: 100%;
+    border-radius: 5%;
   }
 }

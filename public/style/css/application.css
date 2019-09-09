@@ -142,28 +142,17 @@ body {
   .post-container.many-post {
     width: 240px; } }
 
-.comic {
-  margin-bottom: 30px; }
-  .comic .spacer {
-    display: flex;
-    align-items: flex-end; }
-  .comic .carousel {
-    width: 100%;
-    margin: 0 auto; }
-    .comic .carousel .carousel-control-prev-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important; }
-    .comic .carousel .carousel-control-next-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important; }
-    .comic .carousel .comic-border {
-      background: #fff;
-      border: solid black;
-      border-color: black;
-      border-width: 5px 3px 3px 5px;
-      border-radius: 95% 4% 97% 5%/4% 94% 3% 95%; }
-  @media (min-width: 800px) {
-    .comic .carousel {
-      width: 600px;
-      margin: 0 auto; } }
+.gallery__row {
+  display: flex;
+  justify-content: space-between; }
+  .gallery__row .gallery__col {
+    justify-content: center;
+    padding-bottom: 5rem;
+    min-width: 400px;
+    max-width: 600px; }
+    .gallery__row .gallery__col .gallery__img {
+      width: 100%;
+      cursor: pointer; }
 
 .more-comics {
   text-align: center;
@@ -179,31 +168,26 @@ body {
     .more-comics .btn:hover {
       background-image: url("../../docs/images/greensplotch.png"); }
 
-.about-banner {
-  text-align: center; }
-  .about-banner .about-banner-picture {
-    max-height: 273px;
-    max-width: 745px;
-    width: 100%;
-    padding-bottom: 3%; }
-
-@media (min-width: 991.98px) {
-  .about-banner .about-banner-picture {
-    width: 80%; } }
-
-.portrait {
-  margin-bottom: 40px;
-  height: 120px; }
-  .portrait.portrait-left {
-    text-align: center; }
-  .portrait.portrait-right {
-    text-align: center; }
-
-.about-people {
+.modal-content {
+  width: 100%;
+  max-width: 600px;
   display: flex;
-  flex-direction: column;
-  align-self: center;
+  justify-content: center;
   align-items: center;
-  min-width: 175px; }
-  .about-people .portrait {
-    height: 175px; }
+  margin: auto; }
+  .modal-content .modal__img {
+    width: 100%;
+    border-radius: 5%; }
+
+.about-container {
+  height: 85vh; }
+  .about-container .about-banner {
+    text-align: center; }
+    .about-container .about-banner .about-banner-picture {
+      max-height: 200px;
+      max-width: 545px;
+      width: 100%;
+      padding-bottom: 3%; }
+  @media (min-width: 991.98px) {
+    .about-container .about-banner .about-banner-picture {
+      width: 80%; } }

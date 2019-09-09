@@ -16,64 +16,39 @@
     <!-- title -->
     <div class="container">
       <div class="row">
-        <div class="col-2"></div>
 
-        <div class="col-8 header">
-          <h2>Recent Comics</h2>
+        <div class="col header">
+          <h2>Comics</h2>
         </div>
 
-        <div class="col-2"></div>
       </div>
 
-      <!-- comic carousel -->
-      <div class="row comic">
-
-        <div class=".d-none .d-lg-block .d-xl-none col-lg-2 spacer" >
-          <img class="d-none d-xl-block comic-deco comic-deco-left" src="docs/images/pair.png" height="170">
-        </div>
-
-        <div class=".d-none .d-lg-block .d-xl-none col-lg-8">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
-            <div class="carousel-inner">
-
-              <div class="carousel-item active">
-                <a href=<%=`${comicInstaPosts[0].link}` %>><img class="d-block w-100 comic-border" src=<%=`${comicInstaPosts[0].images.standard_resolution.url}` %> alt="First slide" ></a>
-              </div>
-
-              <% comicInstaPosts.splice(0,1)
-               comicInstaPosts.forEach( comic => { %>
-              <div class="carousel-item ">
-                <a href=<%= `${comic.link}` %>><img class="d-block w-100 comic-border" src=<%= `${comic.images.standard_resolution.url}` %> alt="First slide"></a>
-              </div>
-              <% }) %>
-
+      <div class="row gallery__row">
+        <% if (comics) {
+        comics.forEach(comic => { %>
+          <div class="col gallery__col" data-toggle="modal" data-target=<%=`#${comic.label}`%>>
+              <img class="gallery__img" src=<%=comic.route%>>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-
-        <div class=".d-none .d-lg-block .d-xl-none col-lg-2 spacer"></div>
+            <div class="modal fade" id=<%=`${comic.label}`%> tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <a href=<%=comic.link%> target="_blank">
+                      <img class="modal__img" src=<%=comic.route%>>
+                    </a>
+                </div>
+              </div>
+            </div>
+      <% })
+      } %>
       </div>
 
       <!-- View all comics button -->
       <div class="row">
         <div class="col more-comics">
-          <a class="btn btn-lg" href="https://www.instagram.com/labstruggles/" role="button">All Comics</a>
+          <a class="btn btn-lg" href="https://www.instagram.com/labstruggles/" role="button">More Comics</a>
         </div>
       </div>
-
-      <!-- <div class="row footer">
-        <div class="col" style="text-align:center;">
-          LabStruggles &copy; 2018
-        </div>
-      </div> -->
+      
       <%- include ../partials/footer.ejs %>
 
     </div>

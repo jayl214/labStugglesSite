@@ -2,8 +2,6 @@ const fosterPostsController = require('../controllers').fosterPosts;
 const http = require('http');
 var request = require('request');
 
-
-
 module.exports = (app) => {
 
   //home
@@ -17,50 +15,33 @@ module.exports = (app) => {
   });
 
   app.get('/comics',(req, res) => {
-
-    request(`http://api.instagram.com/v1/users/self/media/recent/?access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`, function (error, response, body) {
-      console.log('error:', error); // Print the error if one occurred
-      console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-
-      //raw data from instagram request listing recent posts in array form
-      let recentInstaPosts = JSON.parse(body).data
-
-      //instagram posts that are comics, aka not having the labstrugglesfoster or twitter tags
-      const comicInstaPosts = removePostsHavingTags(["labstrugglesfoster", "twitter"], recentInstaPosts)
-
-      res.render('pages/comics', {"pathname": "comics", "comicInstaPosts": comicInstaPosts})
-    });
-
-    //function that takes array of instagram posts and returns a version eliminating all posts having given tags
-    const removePostsHavingTags = (tagsToRemove, instaData) =>{
-
-        //function that checkes presence of tags in a single post
-        const verifyPresenceOfTags = (tagsToCheck, post)=>{
-          return post.tags.some((tag)=>{
-            return tag === tagsToCheck[0] || tag === tagsToCheck[1]
-          })
-        }
-
-        const modifiedDataSet = []
-
-        instaData.forEach((post)=>{
-          if(!verifyPresenceOfTags(tagsToRemove, post)){
-            modifiedDataSet.push(post)
-          }
-        })
-
-        return modifiedDataSet
-    }
-
+    res.render('pages/comics', {"pathname": "comics", "comics": [
+      {
+        label: "disappointed",
+        route: "docs/images/comics/disappointed.png",
+        link: "https://www.instagram.com/p/BvhHgRLhomg/",
+      },
+      {
+        label: "factoid",
+        route: "docs/images/comics/factoid.png",
+        link: "https://www.instagram.com/p/BtjAR9GBn4n/",
+      },
+      {
+        label: "profonprofhate",
+        route: "docs/images/comics/profonprofhate.png",
+        link: "https://www.instagram.com/p/BvweB8yBFrH/",
+      },
+      {
+        label: "studentnumber3",
+        route: "docs/images/comics/studentnumber3.png",
+        link: "https://www.instagram.com/p/B0OVoAwh80-/",
+      },
+    ]})
   });
 
   app.get('/about',(req, res) => {
     res.render('pages/about', {"pathname": "about"})
   });
-
-  // app.get('/login',(req, res) => {
-  //   res.render('pages/login')
-  // });
 
   //API ROUTES
   app.get('/api', (req, res) => res.status(200).send({

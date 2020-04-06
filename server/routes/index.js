@@ -18,23 +18,23 @@ module.exports = (app) => {
     res.render('pages/comics', {"pathname": "comics", "comics": [
       {
         label: "disappointed",
-        route: "docs/images/comics/disappointed.png",
-        link: "https://www.instagram.com/p/BvhHgRLhomg/",
+        route: "docs/images/comics/tacticalpipette.png",
+        link: "https://www.instagram.com/p/B7JW6GEJ8gy/",
       },
       {
         label: "factoid",
-        route: "docs/images/comics/factoid.png",
-        link: "https://www.instagram.com/p/BtjAR9GBn4n/",
+        route: "docs/images/comics/elevator.png",
+        link: "https://www.instagram.com/p/B4u0HaQh4fo/",
       },
       {
         label: "profonprofhate",
-        route: "docs/images/comics/profonprofhate.png",
-        link: "https://www.instagram.com/p/BvweB8yBFrH/",
+        route: "docs/images/comics/hotchocolate.png",
+        link: "https://www.instagram.com/p/B-h7spfDRL5/",
       },
       {
         label: "studentnumber3",
-        route: "docs/images/comics/studentnumber3.png",
-        link: "https://www.instagram.com/p/B0OVoAwh80-/",
+        route: "docs/images/comics/fullname.png",
+        link: "https://www.instagram.com/p/B-KmXPsjufs/",
       },
     ]})
   });

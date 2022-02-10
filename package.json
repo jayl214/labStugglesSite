@@ -35,7 +35,7 @@
     "sequelize": "^4.37.6"
   },
   "devDependencies": {
-    "node-sass": "^4.9.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.17.3"
   }
 }
